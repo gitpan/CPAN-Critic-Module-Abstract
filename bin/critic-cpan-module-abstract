@@ -1,0 +1,52 @@
+#!/usr/bin/perl
+
+use 5.010;
+use strict;
+use warnings;
+
+use Perinci::CmdLine;
+
+our $VERSION = '0.01'; # VERSION
+
+Perinci::CmdLine->new(
+    url => '/CPAN/Critic/Module/Abstract/critic_cpan_module_abstract',
+)->run;
+
+1;
+# ABSTRACT: Critic CPAN module abstract
+# PODNAME: critic-cpan-module-abstract
+
+
+__END__
+=pod
+
+=head1 NAME
+
+critic-cpan-module-abstract - Critic CPAN module abstract
+
+=head1 VERSION
+
+version 0.01
+
+=head1 SYNOPSIS
+
+ % critic-cpan-module-abstract 'The new great Foo::Bar!'
+
+=head1 DESCRIPTION
+
+This is a command-line interface for the <critic_cpan_module_abstract> function
+in L<CPAN::Critic::Module::Abstract>.
+
+=head1 AUTHOR
+
+Steven Haryanto <stevenharyanto@gmail.com>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2012 by Steven Haryanto.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut
+

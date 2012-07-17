@@ -1,0 +1,52 @@
+{
+   "abstract" : "Critic CPAN module abstract",
+   "author" : [
+      "Steven Haryanto <stevenharyanto@gmail.com>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Dist::Zilla version 4.300006, CPAN::Meta::Converter version 2.113640",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "CPAN-Critic-Module-Abstract",
+   "prereqs" : {
+      "build" : {
+         "requires" : {
+            "Module::Build" : "0.3601"
+         }
+      },
+      "configure" : {
+         "requires" : {
+            "Module::Build" : "0.3601"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Log::Any" : 0,
+            "Perinci::CmdLine" : 0,
+            "Perinci::Sub::DepChecker" : 0,
+            "Perinci::Sub::dep::pm" : 0,
+            "SHARYANTO::Package::Util" : 0,
+            "perl" : "5.010000"
+         }
+      },
+      "test" : {
+         "requires" : {
+            "Test::More" : "0.96"
+         }
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "homepage" : "http://metacpan.org/release/CPAN-Critic-Module-Abstract",
+      "repository" : {
+         "url" : "http://github.com/sharyanto/perl-CPAN-Critic-Module-Abstract"
+      }
+   },
+   "version" : "0.01"
+}
+
