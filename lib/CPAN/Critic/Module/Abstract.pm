@@ -6,16 +6,15 @@ use warnings;
 use Log::Any '$log';
 use SHARYANTO::Package::Util qw(list_package_contents);
 use Perinci::Sub::DepChecker qw(check_deps);
-use Perinci::Sub::dep::pm;
 
 use Exporter;
 our @ISA = qw(Exporter);
 our @EXPORT_OK = qw(
-                       critic_cpan_module_abstract
+                       critique_cpan_module_abstract
                        declare_policy
                );
 
-our $VERSION = '0.01'; # VERSION
+our $VERSION = '0.02'; # VERSION
 
 our %PROFILES;
 our %SPEC;
@@ -165,7 +164,8 @@ declare_policy
         my %args = @_;
         my $ab = $args{abstract};
         if ($ab =~ /^( (?: (?:a|the) \s+)?
-                        (?: perl\s?[56]? \s+)? (?:extension|module|library)
+                        (?: perl\s?[56]? \s+)?
+                        (?:extension|module|library|interface|xs \s binding)
                         (?: \s+ (?:to|for))?
                     )/xi) {
             [409, "Saying '$1' is redundant, omit it"];
@@ -219,6 +219,20 @@ declare_policy
         }
     };
 
+declare_policy
+    name => 'prohibit_just_module_name',
+    severity => 2,
+    args => {},
+    code => sub {
+        my %args = @_;
+        my $ab = $args{abstract};
+        if ($ab =~ /^\w+(::\w+)+$/) {
+            [409, "Should not just be a module name"];
+        } else {
+            [200];
+        }
+    };
+
 # policy: don't repeat module name
 # policy: should be verb + ...
 
@@ -232,7 +246,7 @@ for (keys %{ { list_package_contents(__PACKAGE__) } }) {
 $PROFILES{default} = $PROFILES{all};
 # XXX default: 4/5 if length > 100?
 
-$SPEC{critic_cpan_module_abstract} = {
+$SPEC{critique_cpan_module_abstract} = {
     v => 1.1,
     args => {
         abstract => {
@@ -245,7 +259,7 @@ $SPEC{critic_cpan_module_abstract} = {
         },
     },
 };
-sub critic_cpan_module_abstract {
+sub critique_cpan_module_abstract {
     my %args = @_;
     my $abstract = $args{abstract} // "";
     my $profile  = $args{profile} // "default";
@@ -304,7 +318,7 @@ CPAN::Critic::Module::Abstract - Critic CPAN module abstract
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SYNOPSIS
 
@@ -329,7 +343,7 @@ This module has L<Rinci> metadata.
 
 None are exported by default, but they are exportable.
 
-=head2 critic_cpan_module_abstract(%args) -> [status, msg, result, meta]
+=head2 critique_cpan_module_abstract(%args) -> [status, msg, result, meta]
 
 Arguments ('*' denotes required arguments):
 
@@ -362,6 +376,22 @@ Return value:
 Returns an enveloped result (an array). First element (status) is an integer containing HTTP status code (200 means OK, 4xx caller error, 5xx function error). Second element (msg) is a string containing error message, or 'OK' if status is 200. Third element (result) is optional, the actual result. Fourth element (meta) is called result metadata and is optional, a hash that contains extra information.
 
 =head2 policy_prohibit_ends_with_full_stop(%args) -> [status, msg, result, meta]
+
+Arguments ('*' denotes required arguments):
+
+=over 4
+
+=item * B<abstract>* => I<str>
+
+=item * B<stash> => I<hash>
+
+=back
+
+Return value:
+
+Returns an enveloped result (an array). First element (status) is an integer containing HTTP status code (200 means OK, 4xx caller error, 5xx function error). Second element (msg) is a string containing error message, or 'OK' if status is 200. Third element (result) is optional, the actual result. Fourth element (meta) is called result metadata and is optional, a hash that contains extra information.
+
+=head2 policy_prohibit_just_module_name(%args) -> [status, msg, result, meta]
 
 Arguments ('*' denotes required arguments):
 

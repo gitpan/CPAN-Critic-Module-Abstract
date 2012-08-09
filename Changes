@@ -1,5 +1,17 @@
 Revision history for CPAN-Critic-Module-Abstract
 
+0.02     2012-08-09 (SHARYANTO)
+
+         - Catch redundant phrase 'Perl XS binding for' and 'Perl interface for'
+           [suggested by Ben Bullock].
+
+         - Rename function/command name (critique is the verb).
+
+         - Add policy: just_module_name.
+
+         - Adjust to Perinci::Sub::DepChecker 0.07.
+
+
 0.01     2012-07-17 (SHARYANTO)
 
          First release.

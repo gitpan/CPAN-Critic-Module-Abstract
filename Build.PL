@@ -18,7 +18,7 @@ my %module_build_args = (
     "Steven Haryanto <stevenharyanto\@gmail.com>"
   ],
   "dist_name" => "CPAN-Critic-Module-Abstract",
-  "dist_version" => "0.01",
+  "dist_version" => "0.02",
   "license" => "perl",
   "module_name" => "CPAN::Critic::Module::Abstract",
   "recommends" => {},
@@ -26,13 +26,13 @@ my %module_build_args = (
   "requires" => {
     "Log::Any" => 0,
     "Perinci::CmdLine" => 0,
-    "Perinci::Sub::DepChecker" => 0,
-    "Perinci::Sub::dep::pm" => 0,
+    "Perinci::Sub::Dep::pm" => 0,
+    "Perinci::Sub::DepChecker" => "0.07",
     "SHARYANTO::Package::Util" => 0,
     "perl" => "5.010000"
   },
   "script_files" => [
-    "bin/critic-cpan-module-abstract"
+    "bin/critique-cpan-module-abstract"
   ]
 );
 

@@ -28,8 +28,8 @@
          "requires" : {
             "Log::Any" : 0,
             "Perinci::CmdLine" : 0,
-            "Perinci::Sub::DepChecker" : 0,
-            "Perinci::Sub::dep::pm" : 0,
+            "Perinci::Sub::Dep::pm" : 0,
+            "Perinci::Sub::DepChecker" : "0.07",
             "SHARYANTO::Package::Util" : 0,
             "perl" : "5.010000"
          }
@@ -47,6 +47,6 @@
          "url" : "http://github.com/sharyanto/perl-CPAN-Critic-Module-Abstract"
       }
    },
-   "version" : "0.01"
+   "version" : "0.02"
 }
 

@@ -6,15 +6,15 @@ use warnings;
 
 use Perinci::CmdLine;
 
-our $VERSION = '0.01'; # VERSION
+our $VERSION = '0.02'; # VERSION
 
 Perinci::CmdLine->new(
-    url => '/CPAN/Critic/Module/Abstract/critic_cpan_module_abstract',
+    url => '/CPAN/Critic/Module/Abstract/critique_cpan_module_abstract',
 )->run;
 
 1;
-# ABSTRACT: Critic CPAN module abstract
-# PODNAME: critic-cpan-module-abstract
+# ABSTRACT: Critique CPAN module abstract
+# PODNAME: critique-cpan-module-abstract
 
 
 __END__
@@ -22,20 +22,20 @@ __END__
 
 =head1 NAME
 
-critic-cpan-module-abstract - Critic CPAN module abstract
+critique-cpan-module-abstract - Critique CPAN module abstract
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SYNOPSIS
 
- % critic-cpan-module-abstract 'The new great Foo::Bar!'
+ % critique-cpan-module-abstract 'The new great Foo::Bar!'
 
 =head1 DESCRIPTION
 
-This is a command-line interface for the <critic_cpan_module_abstract> function
-in L<CPAN::Critic::Module::Abstract>.
+This is a command-line interface for the <critique_cpan_module_abstract>
+function in L<CPAN::Critic::Module::Abstract>.
 
 =head1 AUTHOR
 

@@ -6,7 +6,7 @@ MANIFEST.SKIP
 META.json
 META.yml
 README
-bin/critic-cpan-module-abstract
+bin/critique-cpan-module-abstract
 dist.ini
 lib/CPAN/Critic/Module/Abstract.pm
 t/00-compile.t
