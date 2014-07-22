@@ -2,7 +2,9 @@ NAME
     CPAN::Critic::Module::Abstract - Critic CPAN module abstract
 
 VERSION
-    version 0.02
+    This document describes version 0.03 of CPAN::Critic::Module::Abstract
+    (from Perl distribution CPAN-Critic-Module-Abstract), released on
+    2014-07-22.
 
 SYNOPSIS
      % critic-cpan-module-abstract 'Perl extension for blah blah blah'
@@ -15,12 +17,7 @@ DESCRIPTION
 
     Dist::Zilla plugin coming shortly.
 
-DESCRIPTION
-    This module has Rinci metadata.
-
 FUNCTIONS
-    None are exported by default, but they are exportable.
-
   critique_cpan_module_abstract(%args) -> [status, msg, result, meta]
     Arguments ('*' denotes required arguments):
 
@@ -30,12 +27,16 @@ FUNCTIONS
 
     Return value:
 
-    Returns an enveloped result (an array). First element (status) is an
-    integer containing HTTP status code (200 means OK, 4xx caller error, 5xx
-    function error). Second element (msg) is a string containing error
-    message, or 'OK' if status is 200. Third element (result) is optional,
-    the actual result. Fourth element (meta) is called result metadata and
-    is optional, a hash that contains extra information.
+    Returns an enveloped result (an array).
+
+    First element (status) is an integer containing HTTP status code (200
+    means OK, 4xx caller error, 5xx function error). Second element (msg) is
+    a string containing error message, or 'OK' if status is 200. Third
+    element (result) is optional, the actual result. Fourth element (meta)
+    is called result metadata and is optional, a hash that contains extra
+    information.
+
+     (any)
 
   policy_prohibit_empty(%args) -> [status, msg, result, meta]
     Arguments ('*' denotes required arguments):
@@ -46,12 +47,16 @@ FUNCTIONS
 
     Return value:
 
-    Returns an enveloped result (an array). First element (status) is an
-    integer containing HTTP status code (200 means OK, 4xx caller error, 5xx
-    function error). Second element (msg) is a string containing error
-    message, or 'OK' if status is 200. Third element (result) is optional,
-    the actual result. Fourth element (meta) is called result metadata and
-    is optional, a hash that contains extra information.
+    Returns an enveloped result (an array).
+
+    First element (status) is an integer containing HTTP status code (200
+    means OK, 4xx caller error, 5xx function error). Second element (msg) is
+    a string containing error message, or 'OK' if status is 200. Third
+    element (result) is optional, the actual result. Fourth element (meta)
+    is called result metadata and is optional, a hash that contains extra
+    information.
+
+     (any)
 
   policy_prohibit_ends_with_full_stop(%args) -> [status, msg, result, meta]
     Arguments ('*' denotes required arguments):
@@ -62,12 +67,16 @@ FUNCTIONS
 
     Return value:
 
-    Returns an enveloped result (an array). First element (status) is an
-    integer containing HTTP status code (200 means OK, 4xx caller error, 5xx
-    function error). Second element (msg) is a string containing error
-    message, or 'OK' if status is 200. Third element (result) is optional,
-    the actual result. Fourth element (meta) is called result metadata and
-    is optional, a hash that contains extra information.
+    Returns an enveloped result (an array).
+
+    First element (status) is an integer containing HTTP status code (200
+    means OK, 4xx caller error, 5xx function error). Second element (msg) is
+    a string containing error message, or 'OK' if status is 200. Third
+    element (result) is optional, the actual result. Fourth element (meta)
+    is called result metadata and is optional, a hash that contains extra
+    information.
+
+     (any)
 
   policy_prohibit_just_module_name(%args) -> [status, msg, result, meta]
     Arguments ('*' denotes required arguments):
@@ -78,12 +87,16 @@ FUNCTIONS
 
     Return value:
 
-    Returns an enveloped result (an array). First element (status) is an
-    integer containing HTTP status code (200 means OK, 4xx caller error, 5xx
-    function error). Second element (msg) is a string containing error
-    message, or 'OK' if status is 200. Third element (result) is optional,
-    the actual result. Fourth element (meta) is called result metadata and
-    is optional, a hash that contains extra information.
+    Returns an enveloped result (an array).
+
+    First element (status) is an integer containing HTTP status code (200
+    means OK, 4xx caller error, 5xx function error). Second element (msg) is
+    a string containing error message, or 'OK' if status is 200. Third
+    element (result) is optional, the actual result. Fourth element (meta)
+    is called result metadata and is optional, a hash that contains extra
+    information.
+
+     (any)
 
   policy_prohibit_multiline(%args) -> [status, msg, result, meta]
     Arguments ('*' denotes required arguments):
@@ -94,12 +107,16 @@ FUNCTIONS
 
     Return value:
 
-    Returns an enveloped result (an array). First element (status) is an
-    integer containing HTTP status code (200 means OK, 4xx caller error, 5xx
-    function error). Second element (msg) is a string containing error
-    message, or 'OK' if status is 200. Third element (result) is optional,
-    the actual result. Fourth element (meta) is called result metadata and
-    is optional, a hash that contains extra information.
+    Returns an enveloped result (an array).
+
+    First element (status) is an integer containing HTTP status code (200
+    means OK, 4xx caller error, 5xx function error). Second element (msg) is
+    a string containing error message, or 'OK' if status is 200. Third
+    element (result) is optional, the actual result. Fourth element (meta)
+    is called result metadata and is optional, a hash that contains extra
+    information.
+
+     (any)
 
   policy_prohibit_redundancy(%args) -> [status, msg, result, meta]
     Arguments ('*' denotes required arguments):
@@ -110,12 +127,16 @@ FUNCTIONS
 
     Return value:
 
-    Returns an enveloped result (an array). First element (status) is an
-    integer containing HTTP status code (200 means OK, 4xx caller error, 5xx
-    function error). Second element (msg) is a string containing error
-    message, or 'OK' if status is 200. Third element (result) is optional,
-    the actual result. Fourth element (meta) is called result metadata and
-    is optional, a hash that contains extra information.
+    Returns an enveloped result (an array).
+
+    First element (status) is an integer containing HTTP status code (200
+    means OK, 4xx caller error, 5xx function error). Second element (msg) is
+    a string containing error message, or 'OK' if status is 200. Third
+    element (result) is optional, the actual result. Fourth element (meta)
+    is called result metadata and is optional, a hash that contains extra
+    information.
+
+     (any)
 
   policy_prohibit_shouting(%args) -> [status, msg, result, meta]
     Arguments ('*' denotes required arguments):
@@ -126,12 +147,16 @@ FUNCTIONS
 
     Return value:
 
-    Returns an enveloped result (an array). First element (status) is an
-    integer containing HTTP status code (200 means OK, 4xx caller error, 5xx
-    function error). Second element (msg) is a string containing error
-    message, or 'OK' if status is 200. Third element (result) is optional,
-    the actual result. Fourth element (meta) is called result metadata and
-    is optional, a hash that contains extra information.
+    Returns an enveloped result (an array).
+
+    First element (status) is an integer containing HTTP status code (200
+    means OK, 4xx caller error, 5xx function error). Second element (msg) is
+    a string containing error message, or 'OK' if status is 200. Third
+    element (result) is optional, the actual result. Fourth element (meta)
+    is called result metadata and is optional, a hash that contains extra
+    information.
+
+     (any)
 
   policy_prohibit_starts_with_lowercase_letter(%args) -> [status, msg, result, meta]
     Arguments ('*' denotes required arguments):
@@ -142,12 +167,16 @@ FUNCTIONS
 
     Return value:
 
-    Returns an enveloped result (an array). First element (status) is an
-    integer containing HTTP status code (200 means OK, 4xx caller error, 5xx
-    function error). Second element (msg) is a string containing error
-    message, or 'OK' if status is 200. Third element (result) is optional,
-    the actual result. Fourth element (meta) is called result metadata and
-    is optional, a hash that contains extra information.
+    Returns an enveloped result (an array).
+
+    First element (status) is an integer containing HTTP status code (200
+    means OK, 4xx caller error, 5xx function error). Second element (msg) is
+    a string containing error message, or 'OK' if status is 200. Third
+    element (result) is optional, the actual result. Fourth element (meta)
+    is called result metadata and is optional, a hash that contains extra
+    information.
+
+     (any)
 
   policy_prohibit_template(%args) -> [status, msg, result, meta]
     Arguments ('*' denotes required arguments):
@@ -158,12 +187,16 @@ FUNCTIONS
 
     Return value:
 
-    Returns an enveloped result (an array). First element (status) is an
-    integer containing HTTP status code (200 means OK, 4xx caller error, 5xx
-    function error). Second element (msg) is a string containing error
-    message, or 'OK' if status is 200. Third element (result) is optional,
-    the actual result. Fourth element (meta) is called result metadata and
-    is optional, a hash that contains extra information.
+    Returns an enveloped result (an array).
+
+    First element (status) is an integer containing HTTP status code (200
+    means OK, 4xx caller error, 5xx function error). Second element (msg) is
+    a string containing error message, or 'OK' if status is 200. Third
+    element (result) is optional, the actual result. Fourth element (meta)
+    is called result metadata and is optional, a hash that contains extra
+    information.
+
+     (any)
 
   policy_prohibit_too_long(%args) -> [status, msg, result, meta]
     Arguments ('*' denotes required arguments):
@@ -176,12 +209,16 @@ FUNCTIONS
 
     Return value:
 
-    Returns an enveloped result (an array). First element (status) is an
-    integer containing HTTP status code (200 means OK, 4xx caller error, 5xx
-    function error). Second element (msg) is a string containing error
-    message, or 'OK' if status is 200. Third element (result) is optional,
-    the actual result. Fourth element (meta) is called result metadata and
-    is optional, a hash that contains extra information.
+    Returns an enveloped result (an array).
+
+    First element (status) is an integer containing HTTP status code (200
+    means OK, 4xx caller error, 5xx function error). Second element (msg) is
+    a string containing error message, or 'OK' if status is 200. Third
+    element (result) is optional, the actual result. Fourth element (meta)
+    is called result metadata and is optional, a hash that contains extra
+    information.
+
+     (any)
 
   policy_prohibit_too_short(%args) -> [status, msg, result, meta]
     Arguments ('*' denotes required arguments):
@@ -194,12 +231,16 @@ FUNCTIONS
 
     Return value:
 
-    Returns an enveloped result (an array). First element (status) is an
-    integer containing HTTP status code (200 means OK, 4xx caller error, 5xx
-    function error). Second element (msg) is a string containing error
-    message, or 'OK' if status is 200. Third element (result) is optional,
-    the actual result. Fourth element (meta) is called result metadata and
-    is optional, a hash that contains extra information.
+    Returns an enveloped result (an array).
+
+    First element (status) is an integer containing HTTP status code (200
+    means OK, 4xx caller error, 5xx function error). Second element (msg) is
+    a string containing error message, or 'OK' if status is 200. Third
+    element (result) is optional, the actual result. Fourth element (meta)
+    is called result metadata and is optional, a hash that contains extra
+    information.
+
+     (any)
 
   policy_require_english(%args) -> [status, msg, result, meta]
     Arguments ('*' denotes required arguments):
@@ -210,18 +251,38 @@ FUNCTIONS
 
     Return value:
 
-    Returns an enveloped result (an array). First element (status) is an
-    integer containing HTTP status code (200 means OK, 4xx caller error, 5xx
-    function error). Second element (msg) is a string containing error
-    message, or 'OK' if status is 200. Third element (result) is optional,
-    the actual result. Fourth element (meta) is called result metadata and
-    is optional, a hash that contains extra information.
+    Returns an enveloped result (an array).
+
+    First element (status) is an integer containing HTTP status code (200
+    means OK, 4xx caller error, 5xx function error). Second element (msg) is
+    a string containing error message, or 'OK' if status is 200. Third
+    element (result) is optional, the actual result. Fourth element (meta)
+    is called result metadata and is optional, a hash that contains extra
+    information.
+
+     (any)
+
+HOMEPAGE
+    Please visit the project's homepage at
+    <https://metacpan.org/release/CPAN-Critic-Module-Abstract>.
+
+SOURCE
+    Source repository is at
+    <https://github.com/sharyanto/perl-CPAN-Critic-Module-Abstract>.
+
+BUGS
+    Please report any bugs or feature requests on the bugtracker website
+    <https://rt.cpan.org/Public/Dist/Display.html?Name=CPAN-Critic-Module-Ab
+    stract>
+
+    When submitting a bug or request, please include a test-file or a patch
+    to an existing test-file that illustrates the bug or desired feature.
 
 AUTHOR
     Steven Haryanto <stevenharyanto@gmail.com>
 
 COPYRIGHT AND LICENSE
-    This software is copyright (c) 2012 by Steven Haryanto.
+    This software is copyright (c) 2014 by Steven Haryanto.
 
     This is free software; you can redistribute it and/or modify it under
     the same terms as the Perl 5 programming language system itself.
