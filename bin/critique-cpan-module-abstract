@@ -1,19 +1,22 @@
 #!perl
 
-use 5.010;
+# Note: This script is a CLI interface to Riap function /CPAN/Critic/Module/Abstract/critique_cpan_module_abstract
+# and generated automatically using Dist::Zilla::Plugin::Rinci::ScriptFromFunc version 0.01
+
+our $DATE = '2014-08-16'; # DATE
+our $VERSION = '0.04'; # VERSION
+
+use 5.010001;
 use strict;
 use warnings;
 
-use Perinci::CmdLine::Any;
-
-our $VERSION = '0.03'; # VERSION
+use Perinci::CmdLine::Any -prefer_lite=>1;
 
 Perinci::CmdLine::Any->new(
-    url => '/CPAN/Critic/Module/Abstract/critique_cpan_module_abstract',
+    url => "/CPAN/Critic/Module/Abstract/critique_cpan_module_abstract",
 )->run;
 
-1;
-# ABSTRACT: Critique CPAN module abstract
+# ABSTRACT: critique-cpan-module-abstract
 # PODNAME: critique-cpan-module-abstract
 
 __END__
@@ -24,20 +27,31 @@ __END__
 
 =head1 NAME
 
-critique-cpan-module-abstract - Critique CPAN module abstract
+critique-cpan-module-abstract - critique-cpan-module-abstract
 
 =head1 VERSION
 
-This document describes version 0.03 of critique-cpan-module-abstract (from Perl distribution CPAN-Critic-Module-Abstract), released on 2014-07-22.
+This document describes version 0.04 of critique-cpan-module-abstract (from Perl distribution CPAN-Critic-Module-Abstract), released on 2014-08-16.
 
 =head1 SYNOPSIS
 
- % critique-cpan-module-abstract 'The new great Foo::Bar!'
+Usage:
+
+ % critique-cpan-module-abstract
+
+Examples:
+
+ TODO
+
+To see all options:
+
+ % critique-cpan-module-abstract --help
 
 =head1 DESCRIPTION
 
-This is a command-line interface for the <critique_cpan_module_abstract>
-function in L<CPAN::Critic::Module::Abstract>.
+=head1 OPTIONS
+
+ TODO
 
 =head1 HOMEPAGE
 

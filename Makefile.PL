@@ -24,7 +24,7 @@ my %WriteMakefileArgs = (
   "NAME" => "CPAN::Critic::Module::Abstract",
   "PREREQ_PM" => {
     "Log::Any" => 0,
-    "Perinci::CmdLine::Any" => 0,
+    "Perinci::CmdLine::Any" => "0.06",
     "Perinci::Sub::Dep::pm" => 0,
     "Perinci::Sub::DepChecker" => "0.07",
     "Rinci" => "v1.1.0",
@@ -36,7 +36,7 @@ my %WriteMakefileArgs = (
     "IPC::Open3" => 0,
     "Test::More" => "0.98"
   },
-  "VERSION" => "0.03",
+  "VERSION" => "0.04",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -48,7 +48,7 @@ my %FallbackPrereqs = (
   "IO::Handle" => 0,
   "IPC::Open3" => 0,
   "Log::Any" => 0,
-  "Perinci::CmdLine::Any" => 0,
+  "Perinci::CmdLine::Any" => "0.06",
   "Perinci::Sub::Dep::pm" => 0,
   "Perinci::Sub::DepChecker" => "0.07",
   "Rinci" => "v1.1.0",

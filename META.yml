@@ -18,7 +18,7 @@ meta-spec:
 name: CPAN-Critic-Module-Abstract
 requires:
   Log::Any: '0'
-  Perinci::CmdLine::Any: '0'
+  Perinci::CmdLine::Any: '0.06'
   Perinci::Sub::Dep::pm: '0'
   Perinci::Sub::DepChecker: '0.07'
   Rinci: v1.1.0
@@ -28,11 +28,15 @@ resources:
   bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=CPAN-Critic-Module-Abstract
   homepage: https://metacpan.org/release/CPAN-Critic-Module-Abstract
   repository: git://github.com/sharyanto/perl-CPAN-Critic-Module-Abstract.git
-version: '0.03'
+version: '0.04'
 x_Dist_Zilla:
   perl:
     version: '5.018001'
   plugins:
+    -
+      class: Dist::Zilla::Plugin::Rinci::ScriptFromFunc
+      name: Rinci::ScriptFromFunc
+      version: '0.01'
     -
       class: Dist::Zilla::Plugin::GatherDir
       name: '@Author::SHARYANTO/@Filter/GatherDir'
@@ -223,6 +227,10 @@ x_Dist_Zilla:
       name: '@Author::SHARYANTO/Rinci::Validate'
       version: '0.13'
     -
+      class: Dist::Zilla::Plugin::SetScriptShebang
+      name: '@Author::SHARYANTO/SetScriptShebang'
+      version: '0.01'
+    -
       class: Dist::Zilla::Plugin::SHARYANTO::OurPkgVersion
       name: '@Author::SHARYANTO/SHARYANTO::OurPkgVersion'
       version: '0.02'
@@ -245,17 +253,17 @@ x_Dist_Zilla:
       class: Dist::Zilla::Plugin::Prereqs
       config:
         Dist::Zilla::Plugin::Prereqs:
-          phase: runtime
+          phase: test
           type: requires
-      name: Prereqs
+      name: TestRequires
       version: '5.015'
     -
       class: Dist::Zilla::Plugin::Prereqs
       config:
         Dist::Zilla::Plugin::Prereqs:
-          phase: test
+          phase: runtime
           type: requires
-      name: TestRequires
+      name: Prereqs
       version: '5.015'
     -
       class: Dist::Zilla::Plugin::FinderCode

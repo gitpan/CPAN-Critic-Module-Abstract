@@ -1,5 +1,14 @@
 Revision history for CPAN-Critic-Module-Abstract
 
+0.04     2014-08-16 (SHARYANTO) - Happy 19th CPAN Day!
+
+         - [build] CLI scripts are now generated automatically using
+           Dist::Zilla::Plugin::ScriptFromFunc. The plugin is still at 0.01 so the
+           generated script is not as polished as it should be. Stay tuned.
+
+         - Rename CLI script.
+
+
 0.03     2014-07-22 (SHARYANTO)
 
          - No functional changes.

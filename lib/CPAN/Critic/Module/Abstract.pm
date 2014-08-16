@@ -14,7 +14,7 @@ our @EXPORT_OK = qw(
                        declare_policy
                );
 
-our $VERSION = '0.03'; # VERSION
+our $VERSION = '0.04'; # VERSION
 
 our %PROFILES;
 our %SPEC;
@@ -322,7 +322,7 @@ CPAN::Critic::Module::Abstract - Critic CPAN module abstract
 
 =head1 VERSION
 
-This document describes version 0.03 of CPAN::Critic::Module::Abstract (from Perl distribution CPAN-Critic-Module-Abstract), released on 2014-07-22.
+This document describes version 0.04 of CPAN::Critic::Module::Abstract (from Perl distribution CPAN-Critic-Module-Abstract), released on 2014-08-16.
 
 =head1 SYNOPSIS
 
