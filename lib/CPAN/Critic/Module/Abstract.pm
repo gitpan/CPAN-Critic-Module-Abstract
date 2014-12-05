@@ -4,7 +4,7 @@ use 5.010;
 use strict;
 use warnings;
 use Log::Any '$log';
-use SHARYANTO::Package::Util qw(list_package_contents);
+use Package::MoreUtil qw(list_package_contents);
 use Perinci::Sub::DepChecker qw(check_deps);
 
 use Exporter;
@@ -14,7 +14,7 @@ our @EXPORT_OK = qw(
                        declare_policy
                );
 
-our $VERSION = '0.04'; # VERSION
+our $VERSION = '0.05'; # VERSION
 
 our %PROFILES;
 our %SPEC;
@@ -322,7 +322,7 @@ CPAN::Critic::Module::Abstract - Critic CPAN module abstract
 
 =head1 VERSION
 
-This document describes version 0.04 of CPAN::Critic::Module::Abstract (from Perl distribution CPAN-Critic-Module-Abstract), released on 2014-08-16.
+This document describes version 0.05 of CPAN::Critic::Module::Abstract (from Perl distribution CPAN-Critic-Module-Abstract), released on 2014-12-05.
 
 =head1 SYNOPSIS
 
@@ -663,7 +663,7 @@ Please visit the project's homepage at L<https://metacpan.org/release/CPAN-Criti
 
 =head1 SOURCE
 
-Source repository is at L<https://github.com/sharyanto/perl-CPAN-Critic-Module-Abstract>.
+Source repository is at L<https://github.com/perlancar/perl-CPAN-Critic-Module-Abstract>.
 
 =head1 BUGS
 
@@ -675,11 +675,11 @@ feature.
 
 =head1 AUTHOR
 
-Steven Haryanto <stevenharyanto@gmail.com>
+perlancar <perlancar@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2014 by Steven Haryanto.
+This software is copyright (c) 2014 by perlancar@cpan.org.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

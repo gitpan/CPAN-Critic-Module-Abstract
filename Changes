@@ -1,5 +1,13 @@
 Revision history for CPAN-Critic-Module-Abstract
 
+0.05    2014-12-05 (PERLANCAR)
+
+	- No functional changes.
+
+	- Update renamed module SHARYANTO::Package::Util ->
+	  Package::MoreUtil.
+
+
 0.04     2014-08-16 (SHARYANTO) - Happy 19th CPAN Day!
 
          - [build] CLI scripts are now generated automatically using

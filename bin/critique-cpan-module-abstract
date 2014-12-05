@@ -1,10 +1,10 @@
 #!perl
 
 # Note: This script is a CLI interface to Riap function /CPAN/Critic/Module/Abstract/critique_cpan_module_abstract
-# and generated automatically using Dist::Zilla::Plugin::Rinci::ScriptFromFunc version 0.01
+# and generated automatically using Dist::Zilla::Plugin::Rinci::ScriptFromFunc version 0.03
 
-our $DATE = '2014-08-16'; # DATE
-our $VERSION = '0.04'; # VERSION
+our $DATE = '2014-12-05'; # DATE
+our $VERSION = '0.05'; # VERSION
 
 use 5.010001;
 use strict;
@@ -31,27 +31,123 @@ critique-cpan-module-abstract - critique-cpan-module-abstract
 
 =head1 VERSION
 
-This document describes version 0.04 of critique-cpan-module-abstract (from Perl distribution CPAN-Critic-Module-Abstract), released on 2014-08-16.
+This document describes version 0.05 of critique-cpan-module-abstract (from Perl distribution CPAN-Critic-Module-Abstract), released on 2014-12-05.
 
 =head1 SYNOPSIS
 
 Usage:
 
- % critique-cpan-module-abstract
-
-Examples:
-
- TODO
-
-To see all options:
-
- % critique-cpan-module-abstract --help
-
-=head1 DESCRIPTION
+ % critique-cpan-module-abstract [options] <abstract>
 
 =head1 OPTIONS
 
- TODO
+C<*> marks required options.
+
+=over
+
+=item B<--abstract>=I<s>*
+
+=item B<--config-path>=I<s>
+
+Set path to configuration file.
+
+Can be specified multiple times.
+
+=item B<--config-profile>=I<s>
+
+Set configuration profile to use.
+
+=item B<--format>=I<s>
+
+Set output format.
+
+=item B<--help>, B<-h>, B<-?>
+
+Show help message.
+
+=item B<--json>
+
+Set output format to json.
+
+=item B<--naked-res>
+
+When outputing as JSON, strip result envelope.
+
+By default, when outputing as JSON, the full enveloped result is returned, e.g.:
+
+    [200,"OK",[1,2,3],{"func.extra"=>4}]
+
+The reason is so you can get the status (1st element), status message (2nd
+element) as well as result metadata/extra result (4th element) instead of just
+the result (3rd element). However, sometimes you want just the result, e.g. when
+you want to pipe the result for more post-processing:
+
+    [1,2,3]
+
+In this case, you can use `--naked-res`.
+
+
+=item B<--no-config>
+
+Do not use any configuration file.
+
+=item B<--profile>=I<s>
+
+Default value:
+
+ "default"
+
+=item B<--version>, B<-v>
+
+Show program version.
+
+=back
+
+=head1 FILES
+
+B</etc/critique-cpan-module-abstract.conf>
+
+B<~/critique-cpan-module-abstract.conf>
+
+=head1 COMPLETION
+
+This script has shell tab completion capability with support for several shells.
+
+=head2 bash
+
+To activate bash completion for this script, put:
+
+ complete -C critique-cpan-module-abstract critique-cpan-module-abstract
+
+in your bash startup (e.g. C<~/.bashrc>). Your next shell session will then recognize tab completion for the command. Or, you can also directly execute the line above in your shell to activate immediately.
+
+You can also install L<App::BashCompletionProg> which makes it easy to add completion for Perinci::CmdLine-based scripts. After you install the module and put C<. ~/.bash-complete-prog> (or C<. /etc/bash-complete-prog>), you can just run C<bash-completion-prog> and the C<complete> command will be added to your C<~/.bash-completion-prog>. Your next shell session will then recognize tab completion for the command.
+
+=head2 fish
+
+To activate fish completion for this script, execute:
+
+ begin; set -lx COMP_SHELL fish; set -lx COMP_MODE gen_command; critique-cpan-module-abstract; end > $HOME/.config/fish/completions/critique-cpan-module-abstract.fish
+
+Or if you want to install globally, you can instead write the generated script to C</etc/fish/completions/critique-cpan-module-abstract.fish> or C</usr/share/fish/completions/critique-cpan-module-abstract.fish>. The exact path might be different on your system. Please check your C<fish_complete_path> variable.
+
+=head2 tcsh
+
+To activate tcsh completion for this script, put:
+
+ complete critique-cpan-module-abstract 'p/*/`critique-cpan-module-abstract`/'
+
+in your tcsh startup (e.g. C<~/.tcshrc>). Your next shell session will then recognize tab completion for the command. Or, you can also directly execute the line above in your shell to activate immediately.
+
+=head2 zsh
+
+To activate zsh completion for this script, put:
+
+ _critique_cpan_module_abstract() { read -l; local cl="$REPLY"; read -ln; local cp="$REPLY"; reply=(`COMP_SHELL=zsh COMP_LINE="$cl" COMP_POINT="$cp" critique-cpan-module-abstract`) }
+
+ compctl -K _critique_cpan_module_abstract critique-cpan-module-abstract
+
+in your zsh startup (e.g. C<~/.zshrc>). Your next shell session will then recognize tab completion for the command. Or, you can also directly execute the line above in your shell to activate immediately.
 
 =head1 HOMEPAGE
 
@@ -59,7 +155,7 @@ Please visit the project's homepage at L<https://metacpan.org/release/CPAN-Criti
 
 =head1 SOURCE
 
-Source repository is at L<https://github.com/sharyanto/perl-CPAN-Critic-Module-Abstract>.
+Source repository is at L<https://github.com/perlancar/perl-CPAN-Critic-Module-Abstract>.
 
 =head1 BUGS
 
@@ -71,11 +167,11 @@ feature.
 
 =head1 AUTHOR
 
-Steven Haryanto <stevenharyanto@gmail.com>
+perlancar <perlancar@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2014 by Steven Haryanto.
+This software is copyright (c) 2014 by perlancar@cpan.org.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
